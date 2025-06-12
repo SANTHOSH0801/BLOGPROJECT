@@ -8,6 +8,16 @@ import mockPosts from '../data/mockPosts.json'
 import { useNavigate } from 'react-router-dom';
 import { useSelectedBlogId } from '../Context/SelectedBlog';
 
+import image1 from '../assets/images/image-1.avif';
+import image2 from '../assets/images/image-2.avif';
+import image3 from '../assets/images/image-3.avif';
+import image4 from '../assets/images/image-4.avif';
+import image5 from '../assets/images/image-5.avif';
+import image6 from '../assets/images/image-6.avif';
+import image7 from '../assets/images/image-7.avif';
+
+const fallbackImages = [image1, image2, image3, image4, image5, image6, image7];
+
 
 const PostList = () => {
 
@@ -72,7 +82,7 @@ const PostList = () => {
                             <div className="categories__list__post__item" key={index}>
                                 <div className="row">
                                     <div className="col-lg-6 col-md-6">
-                                        <div className="categories__post__item__pic set-bg" style={{ backgroundImage: post.image ? `url(${post.image})` : `url(../src/assets/images/image-${index + 1}.avif` }}>
+                                        <div className="categories__post__item__pic set-bg" style={{ backgroundImage: post.image ? `url(${post.image})` : `url(${fallbackImages[index % fallbackImages.length]})`}}>
                                             <div className="post__meta">
                                                 <h4>{new Date(post.created_at).getDate()}</h4>
                                                 <span>{new Date(post.created_at).toLocaleString('default', { month: 'short' })}</span>
