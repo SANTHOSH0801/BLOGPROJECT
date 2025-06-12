@@ -1,45 +1,35 @@
 import React, { useEffect, useState } from 'react';
 import './BlogDetail.css';
-// import moment from 'moment';
 import axios from 'axios';
-import image1 from '../assets/image-2.jpg';
-
-import { useSelectedBlogId } from '../Context/SelectedBlog.jsx'
+import { useSelectedBlogId } from '../Context/SelectedBlog.jsx';
 
 const BlogDetail = () => {
     const { selectedBlogId } = useSelectedBlogId();
-    const Id = parseInt(selectedBlogId)
-
+    const Id = parseInt(selectedBlogId);
     const [blog, setBlog] = useState(null);
-
     const token = localStorage.getItem('token');
-
 
     useEffect(() => {
         async function fetchBlog() {
             try {
-                const response = await axios.get(`https://blogprojectbackend-production.up.railway.app/api/blogs/${Id}/`, {
+                const response = await axios.get(`http://127.0.0.1:8000/api/blogs/${Id}/`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     }
                 });
-                if (response) {
-                    console.log("Post Data got success")
-                    console.log("Blog", response.data);
-                    setBlog(response.data);
-
+                if (response.data.success) {
+                    console.log("Post Data got success");
+                    console.log("Blog", response.data.blog);
+                    setBlog(response.data.blog);
                 } else {
                     console.log("Issue with the data");
                 }
-            }
-            catch (error) {
+            } catch (error) {
                 console.log("Error in establishing the server:", error);
             }
         }
         fetchBlog();
-        // setPosts(mockPosts);
     }, [Id, token]);
-
 
     if (!blog) {
         return <div className="blog-container">No blog found with ID {Id}</div>;
@@ -64,15 +54,14 @@ const BlogDetail = () => {
                 </div>
                 <div className="blog-image">
                     <img
-                        src={image1}
+                        src={blog.image || '../src/assets/image-2.jpg'}
                         alt="featured"
                     />
                 </div>
                 <div
                     className="blog-html-content"
-                    dangerouslySetInnerHTML={{ __html: blog.description }}
+                    dangerouslySetInnerHTML={{ __html: blog.description || '' }} // Fallback to empty string
                 ></div>
-
             </div>
         </div>
     );
