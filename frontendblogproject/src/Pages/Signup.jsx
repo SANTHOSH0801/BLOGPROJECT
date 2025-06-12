@@ -5,6 +5,7 @@ import axios from 'axios';
 import '../css/Signup.css';
 import logoImage from '../assets/image-1.jpeg';
 import bannerImage from '../assets/Blogs-center.jpg';
+import image3 from '../assets/image-4.jpg'
 
 function Signup() {
     const navigate = useNavigate();
@@ -149,7 +150,7 @@ function Signup() {
                 {/* Right Side Image */}
                 <div className="image-section">
                     <img
-                        src="../src/assets/image-4.jpg"
+                        src={image3}
                         alt="image"
                         className="rounded-3xl object-cover w-full h-[500px]"
                     />
