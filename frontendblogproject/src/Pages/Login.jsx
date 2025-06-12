@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useSelectedEmailid } from '../Context/UserDataContext.jsx'
-import image from "..assets/image-3.avif"
-import blogimage from "..assets/image-1.jpeg"
-import blogcenter from "..assets/Blogs-center.jpg"
+import image from "../assets/image-3.avif"
+import blogimage from "../assets/image-1.jpeg"
+import blogcenter from "../assets/Blogs-center.jpg"
 
 import axios from 'axios';
 import '../css/login.css'
