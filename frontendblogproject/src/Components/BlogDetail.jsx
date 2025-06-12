@@ -13,7 +13,7 @@ const BlogDetail = () => {
     useEffect(() => {
         async function fetchBlog() {
             try {
-                const response = await axios.get(`http://127.0.0.1:8000/api/blogs/${Id}/`, {
+                const response = await axios.get(`https://blogprojectbackend-production.up.railway.app/api/blogs/${Id}/`, {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     }
