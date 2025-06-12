@@ -2,6 +2,9 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import '../css/SingleBlog.css'
 import BlogDetail from '../Components/BlogDetail.jsx'
+import image1 from '../assets/image-1.jpeg'
+import image2 from '../assets/Blogs-center.jpg'
+
 
 function SingleBlog() {
     const navigate = useNavigate()
@@ -11,12 +14,12 @@ function SingleBlog() {
             <header className="header">
 
                 <div className="header-left">
-                    <img src="../src/assets/image-1.jpeg" alt="Blog image" className="logo" />
+                    <img src={image1} alt="Blog image" className="logo" />
                 </div>
 
 
                 <div className="header-center">
-                    <img src="../src/assets/Blogs-center.jpg" alt="Blog center" className="website-name" />
+                    <img src={image2} alt="Blog center" className="website-name" />
                 </div>
 
 
