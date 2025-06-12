@@ -14,9 +14,7 @@ const BlogDetail = () => {
         async function fetchBlog() {
             try {
                 const response = await axios.get(`https://blogprojectbackend-production.up.railway.app/api/blogs/${Id}/`, {
-                    headers: {
-                        Authorization: `Bearer ${token}`,
-                    }
+                    
                 });
                 if (response.data.success) {
                     console.log("Post Data got success");
