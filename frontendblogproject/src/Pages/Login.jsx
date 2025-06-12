@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useSelectedEmailid } from '../Context/UserDataContext.jsx'
+import image form "../src/assets/image-3.avif"
+import blogimage from "../src/assets/image-1.jpeg"
+import blogcenter from "../src/assets/Blogs-center.jpg"
 
 import axios from 'axios';
 import '../css/login.css'
@@ -50,12 +53,12 @@ function Login() {
             <header className="header">
                 {/* Left: Logo */}
                 <div className="header-left">
-                    <img src="../src/assets/image-1.jpeg" alt="Blog image" className="logo" />
+                    <img src={blogimage} alt="Blog image" className="logo" />
                 </div>
 
                 {/* Center: Blog Title Image */}
                 <div className="header-center">
-                    <img src="../src/assets/Blogs-center.jpg" alt="Blog center" className="website-name" />
+                    <img src={blogcenter} alt="Blog center" className="website-name" />
                 </div>
 
                 {/* Right: Navigation */}
@@ -112,7 +115,7 @@ function Login() {
 
                     {/* Right Side */}
                     <div className="image-side">
-                        <img src="../src/assets/image-3.avif" alt="Login Visual" />
+                        <img src= {image} alt="Login side image" />
                     </div>
                 </div>
             </section>
