@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './BlogDetail.css';
 // import moment from 'moment';
 import axios from 'axios';
+import image1 from '../assets/image-2.jpg';
 
 import { useSelectedBlogId } from '../Context/SelectedBlog.jsx'
 
@@ -63,7 +64,7 @@ const BlogDetail = () => {
                 </div>
                 <div className="blog-image">
                     <img
-                        src={blog.image || '../src/assets/image-2.jpg'}
+                        src={image1}
                         alt="featured"
                     />
                 </div>
