@@ -3,6 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import { useSelectedEmailid } from '../Context/UserDataContext.jsx';
 import axios from 'axios';
 import AuthorList from '../Components/AuthorList.jsx';
+import image1 from '../assets/image-1.jpeg'
+import image2 from '../assets/Blogs-center.jpg'
+
+
 
 function BlogEditPage() {
     const navigate = useNavigate();
@@ -70,10 +74,10 @@ function BlogEditPage() {
         <>
             <header className="header">
                 <div className="header-left">
-                    <img src="../src/assets/image-1.jpeg" alt="Blog image" className="logo" />
+                    <img src= {image1} alt="Blog image" className="logo" />
                 </div>
                 <div className="header-center">
-                    <img src="../src/assets/Blogs-center.jpg" alt="Blog center" className="website-name" />
+                    <img src={image2} alt="Blog center" className="website-name" />
                 </div>
                 <nav className="nav-links">
                     <button className="signup" onClick={() => navigate('/')}>Home</button>
