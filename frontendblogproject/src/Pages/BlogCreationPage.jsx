@@ -4,6 +4,9 @@ import '../css/Signup.css'
 import axios from 'axios'
 import UploadImageBlog from '../Components/UploadImageBlog.jsx'
 import { useNavigate } from 'react-router-dom';
+import image1 from '../assets/image-1.jpeg'
+import image2 form '../assets/Blogs-center.jpg'
+
 
 function BlogCreationPage() {
     const navigate = useNavigate();
@@ -82,12 +85,12 @@ function BlogCreationPage() {
             <header className="header">
                 {/* Left: Logo */}
                 <div className="header-left">
-                    <img src="../src/assets/image-1.jpeg" alt="Blog image" className="logo" />
+                    <img src= {image1} alt="Blog image" className="logo" />
                 </div>
 
                 {/* Center: Blog Title Image */}
                 <div className="header-center">
-                    <img src="../src/assets/Blogs-center.jpg" alt="Blog center" className="website-name" />
+                    <img src= {image2} alt="Blog center" className="website-name" />
                 </div>
 
                 {/* Right: Navigation */}
