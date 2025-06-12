@@ -124,7 +124,7 @@ function BlogCreationPage() {
                         placeholder="Enter Blog Type"
                         value={blogType}
                         onChange={(e) => setBlogType(e.target.value)}
-                        className="editable-text-blog"
+                        className="editable-text-blog-type"
                     />
                     {Errors.blogType && (
                         <span className='error-message'>
