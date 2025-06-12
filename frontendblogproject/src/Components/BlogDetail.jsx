@@ -52,10 +52,12 @@ const BlogDetail = () => {
                     </div>
                 </div>
                 <div className="blog-image">
-                    <img
-                      src={blog.image ? blog.image : image1}
-                      alt="featured"
-                    />
+                    <div className="blog-image">
+                        <img
+                          src={image1}
+                          alt="featured"
+                        />
+                    </div>
                 </div>
                 <div
                     className="blog-html-content"
