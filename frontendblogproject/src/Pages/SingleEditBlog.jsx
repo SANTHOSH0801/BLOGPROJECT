@@ -3,6 +3,10 @@ import { useNavigate, useParams } from 'react-router-dom';
 import UploadImageBlog from '../Components/UploadImageBlog.jsx';
 import '../css/SingleEditBlog.css';
 import axios from 'axios';
+import image1 from '../assets/image-1.jpeg'
+import image2 from '../assets/Blogs-center.jpg'
+
+
 
 function SingleEditBlog() {
     const navigate = useNavigate();
@@ -153,10 +157,10 @@ function SingleEditBlog() {
         <>
             <header className="header">
                 <div className="header-left">
-                    <img src="../src/assets/image-1.jpeg" alt="Blog image" className="logo" />
+                    <img src={image1} alt="Blog image" className="logo" />
                 </div>
                 <div className="header-center">
-                    <img src="../src/assets/Blogs-center.jpg" alt="Blog center" className="website-name" />
+                    <img src={image2} alt="Blog center" className="website-name" />
                 </div>
                 <nav className="nav-links">
                     <button className="signup" onClick={() => navigate('/')}>Home</button>
