@@ -5,7 +5,7 @@ import axios from 'axios'
 import UploadImageBlog from '../Components/UploadImageBlog.jsx'
 import { useNavigate } from 'react-router-dom';
 import image1 from '../assets/image-1.jpeg'
-import image2 form '../assets/Blogs-center.jpg'
+import image2 from '../assets/Blogs-center.jpg'
 
 
 function BlogCreationPage() {
