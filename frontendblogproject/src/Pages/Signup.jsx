@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import axios from 'axios';
 import '../css/Signup.css';
+import logoImage from '../assets/image-1.jpeg';
+import bannerImage from '../assets/Blogs-center.jpg';
 
 function Signup() {
     const navigate = useNavigate();
@@ -68,10 +70,10 @@ function Signup() {
         <>
             <header className="header">
                 <div className="header-left">
-                    <img src="../src/assets/image-1.jpeg" alt="Blog image" className="logo" />
+                    <img src={logoImage} alt="Blog image" className="logo" />
                 </div>
                 <div className="header-center">
-                    <img src="../src/assets/Blogs-center.jpg" alt="Blog center" className="website-name" />
+                    <img src= {bannerImage} alt="Blog center" className="website-name" />
                 </div>
                 <nav className="nav-links">
                     <button className="signup" onClick={() => navigate('/')}>Home</button>
