@@ -53,8 +53,8 @@ const BlogDetail = () => {
                 </div>
                 <div className="blog-image">
                     <img
-                        src={blog.image || {image1}}
-                        alt="featured"
+                      src={blog.image ? blog.image : image1}
+                      alt="featured"
                     />
                 </div>
                 <div
