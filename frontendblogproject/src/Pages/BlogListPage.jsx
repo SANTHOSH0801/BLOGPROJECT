@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import '../css/signup.css'
+import '../css/Signup.css'
 import '../css/BlogListPage.css'
 import PostList from '../Components/PostList.jsx'
 
